@@ -35,9 +35,7 @@ The server will log the email and password from the request.
 ##📖 Learning More##
 If you want to learn more about the technologies used in this project, here are a few resources:
 
-<link href='https://go.dev/'>The Go Programming Language</link>
-<link href='https://pkg.go.dev/net/http'>The net/http package</link>
-<link href='https://pkg.go.dev/encoding/json'>The encoding/json package</link>
+<a href='https://go.dev/'>The Go Programming Language</a>
+<a href='https://pkg.go.dev/net/http'>The net/http package</a>
+<a href='https://pkg.go.dev/encoding/json'>The encoding/json package</a>
 Happy coding! 👩‍💻👨‍💻
-
-```
