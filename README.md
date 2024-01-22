@@ -10,7 +10,7 @@ To run the server, simply navigate to the project directory in your terminal and
 go run server/main.go
 ```
 
-##📬 Making a POST Request
+## 📬 Making a POST Request
 You can make a POST request to the root ("/") of the server with a JSON body containing an "Email" and "Password". Here's an example using within Main.go:
 
 ```js
@@ -32,10 +32,10 @@ document.querySelector("button").addEventListener("click", (e) => {
 
 The server will log the email and password from the request.
 
-##📖 Learning More
+## 📖 Learning More
 If you want to learn more about the technologies used in this project, here are a few resources:
 
-<a href='https://go.dev/'>The Go Programming Language</a>
-<a href='https://pkg.go.dev/net/http'>The net/http package</a>
-<a href='https://pkg.go.dev/encoding/json'>The encoding/json package</a>
+- <a href='https://go.dev/'>The Go Programming Language</a>
+- <a href='https://pkg.go.dev/net/http'>The net/http package</a>
+- <a href='https://pkg.go.dev/encoding/json'>The encoding/json package</a>
 Happy coding! 👩‍💻👨‍💻
