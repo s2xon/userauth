@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    cursor: default;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    size: 36px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    background-color: transparent;
+    min-width: fit-content;
+}
+
+
+svg {
+    width: 25px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+.logo-svg {
+    cursor: pointer;
+}
+
+
+.logo-svg path {
+    cursor: pointer;
+}
+
+nav {
+    width: 100vw;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid #F6F6F6;
+    position: fixed;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30%;
+    text-align: center;
+    background-color: transparent;
+}
+
+h2 {
+    font-size: 60px;
+    background-color: transparent;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+p {
+    color: #a6a6a6;
+    margin-bottom: 25px;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 25px;
+    width: auto;
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 25px;
+    height: 100%;
+    width: 250px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.logo-svg-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transform: scale(0.85, 0.85);
+}
+
+.li-si {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 75px;
+    height: 35px;
+    font-weight: 500;
+    box-shadow: 0 1px 1px 0 #0000003a;
+    margin-right: 7px;
+    transition: .3s;
+}
+
+.li-si:hover {
+    background-color: #efefef;
+}
+
+.li-su {
+    background-color: #6D61E1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 75px;
+    height: 35px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.li-su:hover {
+    background-color: #897FF1;
+    box-shadow: 0 0 0 0 #D2CDFF;
+    color: #fff;
+  }
+
+  .grad {
+    position: absolute;
+    transform: translate(0, 50vh);
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, #6f62e4);
+}
+
+.form_container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 40px 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+      0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+      0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+   background-color: transparent;
+    border-radius: 11px;
+  }
+  
+  .title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212121;
+  }
+  
+  .subtitle {
+    font-size: 0.725rem;
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.1rem;
+    color: #8B8E98
+  }
+  
+  .input_container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .icon {
+    width: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 12px;
+    bottom: 9px;
+  }
+  
+  .input_label {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    font-weight: 600;
+  }
+  
+  .input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+  }
+  
+  .sign-in_btn {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: #115DFC;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .sign-in_ggl {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 7px;
+    outline: none;
+    color: #242424;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    cursor: pointer;
+  }
+  
+  .sign-in_apl {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #212121;
+    border-radius: 7px;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 0px #efefef)
+      drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    cursor: pointer;
+  }
+  
+  .separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: #8B8E98;
+  }
+  
+  .separator .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+  }
+  
+  .note {
+    font-size: 0.75rem;
+    color: #8B8E98;
+    text-decoration: underline;
+  }
