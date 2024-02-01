@@ -1,3 +1,201 @@
-body {
-    color: Blue;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: default;
 }
+
+
+h1 {
+    size: 36px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+svg {
+    width: 25px;
+    margin: 0 5px 0 0;
+}
+
+nav {
+    width: 100vw;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid #F6F6F6;
+    position: fixed;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 60px;
+    background-color: transparent;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+p {
+    color: #a6a6a6;
+    margin-bottom: 25px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 25px;
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 25px;
+    height: 100%;
+    width: 250px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.li-si {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    width: 75px;
+    height: 35px;
+    font-weight: 500;
+    box-shadow: 0 1px 1px 0 #0000003a;
+    margin-right: 7px;
+    transition: .3s;
+}
+
+.li-si:hover {
+    background-color: #efefef;
+}
+
+/* .li-si:hover {
+    background-color: #897FF1;
+    box-shadow: 0 0 0 5px #D2CDFF;
+    color: #fff;
+  } */
+
+
+.li-su {
+    background-color: #6D61E1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 75px;
+    height: 35px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.li-su:hover {
+    background-color: #897FF1;
+    box-shadow: 0 0 0 0 #D2CDFF;
+    color: #fff;
+  }
+
+  .github {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    width: 75px;
+    height: 35px;
+    transition: .3s;
+    box-shadow: 0 1px 1px 0 #0000003a;
+    font-weight: 500;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .github:hover {
+    box-shadow: 0 2px 2px 0 #000000;
+    .arrow {
+        transform: translate(0, 4px);
+    }
+  }
+
+  .arrow {
+    background: transparent;
+    rotate: -90deg;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+  }
+
+  .arrow path {
+    fill: white;
+  }
+  .grad {
+    position: absolute;
+    transform: translate(0, 50vh);
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, #6f62e4);
+}
+
+
+.github-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    padding: 0 0 0 5px;
+    background-color: transparent;
+}
+
+.github-logo path{
+    fill: #ffffff;
+}
+
+.li-su-big {
+    background-color: #6D61E1;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 35px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.li-su-big:hover {
+    background-color: #897FF1;
+    box-shadow: 0 0 0 0 #D2CDFF;
+    color: #fff;
+  }

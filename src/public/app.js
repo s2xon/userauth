@@ -1,15 +1,27 @@
+import { James } from "./routers/routes.js";
+
+James()
+
+
+
 const url = "http://localhost:3000"
 
 const Email = () => {
-    return document.getElementById("Email").value;
+    let value = document.getElementById("SU-Email").value;
+    console.log(value)
+    return value
 };
 
 const Password = () => {
-    return document.getElementById("Password").value;
+    let value = document.getElementById("SU-Password").value;
+    console.log(value)
+    return value
 };
 
+const SUButton = document.getElementById("SU-Button")
+const SIButton = document.getElementById("SI-Button")
 
-document.querySelector("button").addEventListener("click", (e) => {
+SUButton.addEventListener("click", (e) => {
     e.preventDefault();
     fetch(url,{
         method: 'POST',
@@ -17,9 +29,11 @@ document.querySelector("button").addEventListener("click", (e) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            email: Email,
-            password: Password,
+            email: Email(),
+            password: Password(),
         }),
     })
-    .then((response) => console.log(response.json()));
+    .then((res) => console.log(res.json))
 });
+
+
