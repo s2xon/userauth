@@ -108,6 +108,19 @@ button {
 
 }
 
+.github-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  padding: 0 0 0 5px;
+  background-color: transparent;
+}
+
+.github-logo path{
+  fill: #ffffff;
+}
+
 main {
     width: 100vw;
     height: 100vh;
