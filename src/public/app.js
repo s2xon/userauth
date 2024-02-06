@@ -36,4 +36,10 @@ SUButton.addEventListener("click", (e) => {
     .then((res) => console.log(res.json))
 });
 
+const signinButton = document.getElementsByClassName('sign-in_btn')
+const sigupButton = document.getElementById('su')
 
+
+signinButton.addEventListener('click', (e) => {
+    console.log("got pass")
+})

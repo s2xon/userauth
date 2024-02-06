@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
-    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav>
@@ -61,6 +61,7 @@
                   </svg>
                   <input placeholder="name@mail.com" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field">
                 </div>
+                <span class='errorText' id='InvalidEmail'></span>
                 <div class="input_container">
                   <label class="input_label" for="password_field">Password</label>
                   <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -70,6 +71,7 @@
                   </svg>
                   <input placeholder="Password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field">
                 </div>
+                <span class='errorText' id='InvalidPass'></span>
                 <button title="Sign In" type="submit" class="sign-in_btn">
                   <span>Sign In</span>
                 </button>
