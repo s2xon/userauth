@@ -77,8 +77,6 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			isUser := data.User
-			if isUser {
 				var dataFound Data
 				result := db.Where("email =?", data.Email).First(&dataFound)
 				if result.Error != nil {
@@ -96,10 +94,9 @@ func main() {
 						}
 					}
 				}
-				if !isUser && data.SignUp {
+				if data.SignUp && data.Email != dataFound.Email {
 					db.Save(&Data{Email: data.Email, Password: hashedPass})
 				}
-			}
 		}
 	})
 

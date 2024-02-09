@@ -130,7 +130,7 @@ const routes = [
               </svg>
               <input placeholder="Password" title="Inpit title" type="password" class="input_field" id="password_field">
             </div>
-            <button title="Sign Up" class="sign-in_btn">
+            <button onclick="signup(event)" title="Sign Up" class="sign-in_btn">
               <span>Sign Up</span>
             </button>
           
@@ -218,7 +218,7 @@ function signup(event) {
   event.preventDefault();
   const email = document.getElementById("email_field").value;
   const password = document.getElementById("password_field").value;
-  console.log(password);
+  // console.log(password)
   fetch(url, {
     method: "POST",
     headers: {
@@ -230,8 +230,19 @@ function signup(event) {
       user: true,
       signup: true,
     }),
-  }).then((resp) => console.log(resp));
+  }).then((resp) =>
+    resp
+      .json()
+      .then((data) => ({
+        data: data,
+        // status: resp.status
+      }))
+      .then((resp) => {
+        console.log(resp.data, resp.data.title);
+      })
+  );
 }
+
 
 window.addEventListener("popstate", function () {
   let data = routes.find((route) => route.path == window.location.pathname);
