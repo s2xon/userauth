@@ -198,7 +198,6 @@ function signin(event) {
     body: JSON.stringify({
       email: email,
       password: password,
-      user: true,
       signup: false,
     }),
   }).then((resp) =>
@@ -209,7 +208,10 @@ function signin(event) {
         // status: resp.status
       }))
       .then((resp) => {
-        console.log(resp.data, resp.data.title);
+        if (resp.data.NotUser) {
+          const invalidText = document.getElementById("InvalidEmail")
+          invalidText.innerText = "invalid username or password"
+        }
       })
   );
 }
@@ -227,7 +229,6 @@ function signup(event) {
     body: JSON.stringify({
       email: email,
       password: password,
-      user: true,
       signup: true,
     }),
   }).then((resp) =>

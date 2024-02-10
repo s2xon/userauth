@@ -28,6 +28,10 @@ type CheckPass struct {
 	Check bool `json:"checkUser"`
 }
 
+type NotUser struct {
+	User bool `json:"NotUser"`
+}
+
 func res(w http.ResponseWriter, r *http.Request, check bool) {
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
@@ -78,9 +82,21 @@ func main() {
 				log.Fatal(err)
 			}
 				var dataFound Data
+				if !data.SignUp {
 				result := db.Where("email =?", data.Email).First(&dataFound)
 				if result.Error != nil {
-					log.Fatal(result.Error)
+					log.Println(result.Error)
+					// Make HTTP Response no result found
+					w.WriteHeader(http.StatusOK)
+					w.Header().Set("Content-Type", "application/json")
+					notuser := NotUser{
+						User: true,
+					}
+					encoder := json.NewEncoder(w).Encode(notuser)
+					if encoder != nil {
+						log.Panic(w, encoder.Error(), 500)
+						return
+					}
 				} else {
 					if data.Email == dataFound.Email {
 						log.Println("Connected")
@@ -94,6 +110,7 @@ func main() {
 						}
 					}
 				}
+			}
 				if data.SignUp && data.Email != dataFound.Email {
 					db.Save(&Data{Email: data.Email, Password: hashedPass})
 				}
